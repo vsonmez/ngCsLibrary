@@ -1,0 +1,15 @@
+<div class="card {{borderColor}}">
+	<div class="card-header d-flex bg-{{ theme }}" [ngClass]="cssClassHeader">
+		<span class="align-self-center">{{ panelTitle }}</span>
+		<button class="ml-auto align-self-center btn btn-sm btn-light" *ngIf="canToggle" (click)="handleToggleContent()">
+			<i class="fa fa-angle-up" *ngIf="!isExpanded"></i>
+			<i class="fa fa-angle-down" *ngIf="isExpanded"></i>
+		</button>
+	</div>
+	<div class="card-body" [class.d-none]="canToggle && isExpanded">
+		<ng-content select="[body]"></ng-content>
+	</div>
+	<div class="card-footer bg-{{ theme }}" [class.d-none]="canToggle && isExpanded" [ngClass]="cssClassHeader">
+		<ng-content select="[footer]"></ng-content>
+	</div>
+</div>

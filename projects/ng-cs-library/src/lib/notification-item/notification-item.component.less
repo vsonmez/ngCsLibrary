@@ -1,0 +1,124 @@
+.notification {
+	overflow  : hidden;
+	background: #fff;
+	position  : relative;
+
+	.notification-progress-bar {
+		position  : absolute;
+		left      : 0;
+		right     : 0;
+		bottom    : 0;
+		background: #adb5bd;
+		height    : 3px;
+
+		&:after {
+			content          : "";
+			position         : absolute;
+			left             : 0;
+			width            : 0;
+			height           : 3px;
+			background       : #495057;
+			animation        : progressBar 6s linear;
+			-moz-animation   : progressBar 6s linear;
+			-webkit-animation: progressBar 6s linear;
+			-ms-animation    : progressBar 6s linear;
+			-o-animation     : progressBar 6s linear;
+		}
+
+		&.init {
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+
+	>div {
+		&:first-child {
+			color    : #fff;
+			font-size: 24px;
+		}
+	}
+
+	&.notification-danger {
+		>div {
+			&:first-child {
+				background: #dc3545;
+			}
+		}
+	}
+
+	&.notification-info {
+		>div {
+			&:first-child {
+				background: #17a2b8;
+			}
+		}
+	}
+
+	&.notification-success {
+		>div {
+			&:first-child {
+				background: #28a745;
+			}
+		}
+	}
+
+	&.notification-default {
+		>div {
+			&:first-child {
+				background: #f8f9fa;
+				color     : #6c757d;
+			}
+		}
+	}
+}
+
+@keyframes progressBar {
+	0% {
+		width: 0
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@-moz-keyframes progressBar {
+	0% {
+		width: 0
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes progressBar {
+	0% {
+		width: 0
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@-ms-keyframes progressBar {
+	0% {
+		width: 0
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@-o-keyframes progressBar {
+	0% {
+		width: 0
+	}
+
+	100% {
+		width: 100%;
+	}
+}

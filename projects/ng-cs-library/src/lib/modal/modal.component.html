@@ -1,0 +1,20 @@
+<div class="modal" *ngIf="show">
+  <div class="modal-dialog" [class.modal-lg]="isLG" [class.modal-xl]="isXL">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          {{ modalTitle }}
+        </h5>
+        <button type="button" class="close" [routerLink]="routerLinkString" *ngIf="routerLinkString">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ng-content select="[body]"></ng-content>
+      </div>
+      <div class="modal-footer">
+        <ng-content select="[footer]"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

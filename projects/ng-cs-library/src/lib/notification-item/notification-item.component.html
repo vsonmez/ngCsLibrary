@@ -1,0 +1,15 @@
+<div class="notification notification-{{ notification.type }} d-flex rounded">
+  <div class="p-2 align-self-center">
+    <i class="fa fa-exclamation-circle" *ngIf="notification.type === 'danger'"></i>
+    <i class="fa fa-info-circle" *ngIf="notification.type === 'info'"></i>
+    <i class="fa fa-check-circle" *ngIf="notification.type === 'success'"></i>
+    <i class="fa fa-circle" *ngIf="notification.type === 'default'"></i>
+  </div>
+  <div class="align-self-center p-2">{{ notification.text }}</div>
+  <div class="align-self-center p-2 ml-auto">
+    <button (click)="remove()" class="btn btn-sm btn-light">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+  <div class="notification-progress-bar"></div>
+</div>

@@ -1,0 +1,7 @@
+<ul class="list-unstyled m-0 notification-list">
+  <ng-template ngFor let-notification [ngForOf]="notifications">
+    <li>
+      <cs-notification-item [notification]="notification"></cs-notification-item>
+    </li>
+  </ng-template>
+</ul>
