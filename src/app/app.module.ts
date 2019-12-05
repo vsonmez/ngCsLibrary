@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { NgCsLibraryModule } from "projects/ng-cs-library/src/public-api";
+import { NgCsLibraryModule} from "ng-cs-library";
 
 @NgModule({
   declarations: [AppComponent],

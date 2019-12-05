@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NgCsLibraryService } from "projects/ng-cs-library/src/public-api";
+import {NotificationService} from "ng-cs-library";
 
 @Component({
   selector: "app-root",
@@ -7,10 +7,11 @@ import { NgCsLibraryService } from "projects/ng-cs-library/src/public-api";
   styleUrls: ["./app.component.less"]
 })
 export class AppComponent {
-  constructor(private libraryService: NgCsLibraryService) {
-	  libraryService.addNotification({
-		  text: "Lorem",
-		  type: "danger"
-	  });
+  constructor(private not: NotificationService) { }
+  ngOnInit(){
+	this.not.addNotification({
+		text: "Lorem",
+		type: "danger"
+	});
   }
 }

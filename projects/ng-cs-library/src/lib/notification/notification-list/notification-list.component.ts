@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { I_Notification } from "../../types";
 import { Subscription } from "rxjs";
-import { NgCsLibraryService } from "../ng-cs-library.service";
+import { I_Notification } from 'projects/ng-cs-library/src/types';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: "cs-notification",
@@ -11,9 +11,9 @@ import { NgCsLibraryService } from "../ng-cs-library.service";
 export class NotificationListComponent implements OnInit {
   notifications: I_Notification[];
   private notificationSubscription: Subscription;
-  constructor(private libraryService: NgCsLibraryService) {}
+  constructor(private notificationService: NotificationService) {}
   ngOnInit() {
-    this.notificationSubscription = this.libraryService.notifications.subscribe(result => {
+    this.notificationSubscription = this.notificationService.notifications.subscribe(result => {
       this.notifications = result;
     });
   }

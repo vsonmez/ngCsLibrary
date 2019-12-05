@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { I_Notification } from "../../types";
 import { interval, Subscription } from "rxjs";
-import { NgCsLibraryService } from "../ng-cs-library.service";
+import { I_Notification } from 'projects/ng-cs-library/src/types';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: "cs-notification-item",
@@ -12,7 +12,7 @@ export class NotificationItemComponent implements OnInit {
   @Input() notification: I_Notification;
   private removeTimer = interval(1000);
   private timerSubscription: Subscription;
-  constructor(private libraryService: NgCsLibraryService) {}
+  constructor(private notificationService: NotificationService) {}
   ngOnInit() {
     this.timerSubscription = this.removeTimer.subscribe(time => {
       if (time === 5) {
@@ -21,7 +21,7 @@ export class NotificationItemComponent implements OnInit {
     });
   }
   remove() {
-    this.libraryService.removeNotification(this.notification);
+    this.notificationService.removeNotification(this.notification);
     setTimeout(() => {
       this.timerSubscription.unsubscribe();
     });
