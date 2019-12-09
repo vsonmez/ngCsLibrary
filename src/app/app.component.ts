@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import {NotificationService} from "ng-cs-library";
 
 @Component({
   selector: "app-root",
@@ -7,11 +6,7 @@ import {NotificationService} from "ng-cs-library";
   styleUrls: ["./app.component.less"]
 })
 export class AppComponent {
-  constructor(private not: NotificationService) { }
+  constructor() { }
   ngOnInit(){
-	this.not.addNotification({
-		text: "Lorem",
-		type: "danger"
-	});
   }
 }

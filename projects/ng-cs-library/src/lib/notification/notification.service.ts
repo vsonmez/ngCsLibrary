@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { I_Notification } from '../../types';
 
-@Injectable({
-	providedIn: "root"
-})
+@Injectable()
 export class NotificationService {
 	notifications: BehaviorSubject<I_Notification[]> = new BehaviorSubject([]);
 	constructor() {}

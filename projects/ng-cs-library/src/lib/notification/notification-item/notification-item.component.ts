@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { interval, Subscription } from "rxjs";
-import { I_Notification } from 'projects/ng-cs-library/src/types';
+import { I_Notification } from '../../../types';
 import { NotificationService } from '../notification.service';
 
 @Component({

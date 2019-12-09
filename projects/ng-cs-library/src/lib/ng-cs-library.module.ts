@@ -1,12 +1,11 @@
 import { NgModule } from "@angular/core";
-import { SpinnerComponent } from "./spinner/spinner.component";
-import { PanelComponent } from './panel/panel.component';
 import { CommonModule } from '@angular/common';
-import { ModalComponent } from './modal/modal.component';
 import { RouterModule } from '@angular/router';
+import { NgCsLibraryComponent } from './ng-cs-library.component';
 
 @NgModule({
-  declarations: [SpinnerComponent, PanelComponent, ModalComponent],
-  imports: [CommonModule, RouterModule]
+  declarations: [NgCsLibraryComponent],
+  imports: [CommonModule, RouterModule],
+  exports: []
 })
 export class NgCsLibraryModule {}
