@@ -130,7 +130,7 @@
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/ng-cs-library/tsconfig.lib.json",
-            "project": "projects/ng-cs-library/ng-package.json"
+			"project": "projects/ng-cs-library/ng-package.json",
           }
         },
         "test": {
@@ -138,7 +138,7 @@
           "options": {
             "main": "projects/ng-cs-library/src/test.ts",
             "tsConfig": "projects/ng-cs-library/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-cs-library/karma.conf.js"
+			"karmaConfig": "projects/ng-cs-library/karma.conf.js"
           }
         },
         "lint": {
@@ -147,7 +147,7 @@
             "tsConfig": [
               "projects/ng-cs-library/tsconfig.lib.json",
               "projects/ng-cs-library/tsconfig.spec.json"
-            ],
+			],
             "exclude": [
               "**/node_modules/**"
             ]

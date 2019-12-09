@@ -1,6 +1,6 @@
 {
 	"name": "ng-cs-library",
-	"version": "0.0.46",
+	"version": "0.0.53",
 	"peerDependencies": {
 		"@angular/common": "^8.0.3",
 		"@angular/core": "^8.0.3"
